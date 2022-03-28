@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizlet</title>
+
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-item">
+            <a href="../index.html" class="header-item__title">Quizlet</a>
+        </div>
+
+        <div class="header-item">
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list__item menu-list__item-border">
+                            <a href="signin.html" class="menu-list__item-text" >Sign in</a>
+                    </li>
+
+                    <li class="menu-list__item menu-list__item-border ">
+                            <a href="register.html" class="menu-list__item-text">Register</a>
+                    </li>
+                </ul>
+            </nav>
+    </header> 
+
+    <main>
+        <div class="form-container">
+            <h2 class="form-container__title">Add new card</h2>
+            <form class="form">
+
+                <div class="form-input">
+                    <label class="form-input__label">Definition/Question</label>
+                    <textarea class="form-input__field" name="definition/q" required id="" cols="25" rows="3" placeholder="Enter definition/question"></textarea>
+                </div>
+
+                <div class="form-input">
+                    <label  class="form-input__label">Answer</label>
+                    <textarea class="form-input__field" name="answer" required id="" cols="25" rows="2" placeholder="Enter answer for definition/question"></textarea>
+                </div>
+
+                <div class="form-input">
+                    <label  class="form-input__label">Select category</label>
+                    <select name="cat" id="" class="form-input__field" required>
+                        <option value="">Select a category</option>
+                        <option value="1">School</option>
+                        <option value="2">English</option>
+                        <option value="3">IT</option>
+                    </select>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="form-button__submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <hr >
+        <div class="footer-data">
+            <span class="footer-data__company">
+                @ Alex Yatsyna,2022
+            </span>
+
+            <ul class="menu-list"> 
+                <li class="menu-list__item">
+                    <a href="https://www.instagram.com/">
+                        <img class="menu-list__search-image" src="../images/insta.png" alt="">
+                    </a>
+                </li>
+                <li class="menu-list__item">
+                    <a href="https://vk.com/">
+                        <img class="menu-list__search-image" src="../images/vk.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+</body>
+</html>
