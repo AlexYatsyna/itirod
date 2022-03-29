@@ -133,7 +133,13 @@ a {
     padding-top: 0.625rem;
     padding-right: 1.25rem;
 }
-.table-margin {
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px,450px));
+    justify-content: center;
+    grid-column-gap: 1.25rem;
+    align-items: center;
     margin-top: 8%;
     margin-bottom: 10%;
 }
@@ -175,24 +181,26 @@ a {
     
 }
 
-.table-item__lbutton {
+.content-button {
     background: var(--header-color);
     border: none;
-    float: right;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.35);
     padding: 0.938rem;
     border-radius: 1.25rem;
-    cursor: pointer;
+    cursor: pointer; 
+    
 }
 
-.table-item__rbutton {
-    background: var(--header-color);
-    border: none;
+.content-item {
+    display: inline;
+}
+
+.content-lbutton {
+    float: right;
+}
+
+.content-rbutton {
     float: left;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.35);
-    padding: 0.938rem;
-    border-radius: 1.25rem;
-    cursor: pointer;
 }
 
 .category-form__name {
@@ -360,6 +368,12 @@ ul > li {
 
 .form-list {
     justify-content: space-between;
+}
+
+.defenition-text {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
 }
 
 @media screen and (max-width: 370px) {
