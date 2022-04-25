@@ -265,6 +265,7 @@ a {
 .category-form__description {
     font-style: normal;
     font-weight: normal;
+    text-align: center;
     pointer-events: none;
     font-size: 1.25rem;
     color: var(--text-color); 
@@ -455,5 +456,64 @@ a {
         justify-content: center;
     }
 
+    .category-form__back-answer
+    {
+        font-size: 1.25rem;
+    }
+
 }
 
+@media screen and (min-width: 850px) {
+    .category-form__back-answer
+    {
+        font-size: 1.5rem;
+    }
+}
+
+/*flip button*/
+.content-button__card {
+    background: var(--header-color);
+    border: none;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.35);
+    padding: 0.938rem;
+    border-radius: 1.25rem;
+    min-height: 13rem;
+    min-width: 20rem;
+    max-width: 25rem;
+    cursor: pointer; 
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.content-button__front,
+.content-button__back {
+    backface-visibility: hidden;
+}
+
+.content-button__front{
+    align-items: center;
+    transform: rotateX(0deg);
+}
+
+.content-button__back{
+    transform: rotateY(180deg);
+    text-align: center;
+    right: 0;
+    position:absolute;
+    left: 0;
+    top: 1rem;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.category-form__back-answer {
+    font-style: normal;
+    font-weight: normal;
+    pointer-events: none;
+    color: var(--text-color); 
+}
+.hide{
+    display: none;
+}

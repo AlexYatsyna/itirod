@@ -6,8 +6,10 @@
     <title>Quizlet</title>
 
     <link rel="stylesheet" href="../styles/style.css">
+    
 </head>
 <body>
+    
     <header class="header">
         <div class="header-item">
             <a href="../index.html" class="header-item__title">Quizlet</a>
@@ -37,12 +39,16 @@
             </div>
 
             <div class="content-item">
-                <button class="content-button">
-                        <p class="category-form__name">Category</p>
-                        <p class="category-form__description">
-                            asdasd dddddd asd asda da adasdasd asdasd asda  ddddd  ddddd dddddddddddddd ddddasdasdad
+                <button class="content-button__card">
+                    <div class="content-button__front">
+                        <p class="category-form__description" id="question">
                         </p>
-                </a>
+                    </div>
+
+                    <div class="content-button__back">
+                        <p class="category-form__back-answer" id="answer"></p>
+                    </div>
+                </button>
             </div>
 
             <div class="content-item">
@@ -59,81 +65,11 @@
         <br>
 
         <span class="form-input__label2">
-            Scroll down to view 10-15 terms from the module ╭[ ᴼᴼ ౪ ᴼᴼ]╮ 
+            Scroll down to view terms from the module ╭[ ᴼᴼ ౪ ᴼᴼ]╮ 
         </span>
 
         <ul class="table-defenition">
-            <li class="table-item">
-                <span class="table-item__category">
-                    Defenition:
-                        <p class="defenition-text">aasdas dasds asdasdasda sd  dasdasd</p>
-                    Answer:        
-                        <p class="card-answer">
-                            aaaaa aaaaas d
-                        </p>
-                
-                </a>
-            </li>
-
-            <li class="table-item">
-                <span class="table-item__category">
-                    Defenition:
-                        <p class="defenition-text">aasdas dasds asdasdasda sd  dasdasd</p>
-                    Answer:        
-                        <p class="card-answer">
-                            aaaaaaaaaa aaaaa aaaaaaaaaa asda  asd as das das d
-                        </p>
-                
-                </a>
-            </li>
-
-            <li class="table-item">
-                <span class="table-item__category">
-                    Defenition:
-                        <p class="defenition-text">aasdaasdasdasds dasds asdasdasda sd  dasdasd</p>
-                    Answer:        
-                        <p class="card-answer">
-                            aaaaaaaaaa aaaaa aaaaaaaa asda  asd as das das d
-                        </p>
-                
-                </a>
-            </li>
-
-            <li class="table-item">
-                <span class="table-item__category">
-                    Defenition:
-                        <p class="defenition-text">aasdgfdfgdfgdf dasds asdasdasda sd  dasdasd</p>
-                    Answer:        
-                        <p class="card-answer">
-                            aaaaaaa aaaaa aaaaaaaaaa asda  asd as das das d
-                        </p>
-                
-                </a>
-            </li>
-
-            <li class="table-item">
-                <span class="table-item__category">
-                    Defenition:
-                        <p class="defenition-text">aasdas dadasda sd  dasdasd</p>
-                    Answer:        
-                        <p class="card-answer">
-                            aaaaaaaaaa aaaaaa asda  asd as das das d
-                        </p>
-                
-                </a>
-            </li>
-
-            <li class="table-item">
-                <span class="table-item__category">
-                    Defenition:
-                        <p class="defenition-text">aasdas dasds asdasdasda sd  dasdasd</p>
-                    Answer:        
-                        <p class="card-answer" >
-                            aaaaaaaaaa aaaaa aaaaaaaaaa asda  asd as das das d
-                        </p>
-                
-                </a>
-            </li>
+            
             
         </ul> 
   
@@ -161,5 +97,9 @@
         </div>
 
     </footer>
+    <script src="../js/models.js"></script>
+    <script src="../js/html-elements.js"></script>
+    <script src="../js/category-page.js"></script>
+    <script src="../js/category-btns.js"></script>
 </body>
 </html>

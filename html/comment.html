@@ -12,11 +12,11 @@
     <main>
         <div class="form-container">
             <p class="form-container__title">Leave a comment</p>
-            <form class="form">
+            <form class="form" method="post">
 
                 <div class="form-input">
                     <label  class="form-input__label">Your feedback</label>
-                    <textarea class="form-input__field" name="definition/q" required id="" cols="20" rows="10" placeholder="Enter your feedback"></textarea>
+                    <textarea class="form-input__field" id="commentText" cols="20" rows="10" placeholder="Enter your feedback"></textarea>
                 </div>
                 
                 <div class="menu-list form-list">
@@ -29,7 +29,7 @@
 
                     <div class="comment-element">
                         <div class="form-button">
-                            <button type="submit" class="form-button__submit">Add</button>
+                            <button type="submit" onclick="submitComment()" class="form-button__submit">Add</button>
                         </div>
                     </div>
                 </div>
@@ -62,5 +62,7 @@
         </div>
 
     </footer>   
+
+    <script src="../js/comment.js"></script>
 </body>
 </html>
