@@ -1,15 +1,20 @@
+var categoryId = getUrlParam("id");
+let currentCard = 0;
+let cardElements = [];
 
-let currentCard = 1;
+db.getCardsByCategory(categoryId).then( (element) =>{
+    element.docs.forEach( card => {
+        cardElements.push(card.data());
+        fillDefenitionTable(card.data());
+    });
 
-fillCard(cardElements[currentCard]);
-
-for(card of cardElements){
-    fillDefenitionTable(card);
-}
+    fillCard(cardElements[currentCard]);     
+})
 
 function fillCard(card){
     setParagrapgTextById("question", card.question);
     setParagrapgTextById("answer", card.answer);
+    
 }
 
 function fillDefenitionTable(card){

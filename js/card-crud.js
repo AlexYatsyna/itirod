@@ -1,28 +1,39 @@
-fillSelectField()
+fillSelectField();
 
 function submitAdd(){
     let inpQuestion = document.getElementById("input-question").value;
     let inpAnswer = document.getElementById("input-answer").value;
-    let selectedCategory = document.getElementById("input-category").value;
-    let errors = validateForm(inpQuestion,inpAnswer,selectedCategory);
+    let selectedCategoryID = document.getElementById("input-category").value;
+    let errors = validateForm(inpQuestion, inpAnswer, selectedCategoryID);
     
-    if(errors === 0){
-        alert("Successful!")
-        //TODO: add to db firebase;
+    if(errors === 0 ){
+        let newCard = new Card(inpQuestion, inpAnswer, selectedCategoryID);
+        db.addCard(newCard).then( (card) => {
+            location.href = "../index.html";
+        });    
     }
-
 }
 
 function submitUpdate(){
+    let id = "example";
     let inpQuestion = document.getElementById("input-question").value;
     let inpAnswer = document.getElementById("input-answer").value;
-    let selectedCategory = document.getElementById("input-category").value;
-    let errors = validateForm(inpQuestion,inpAnswer,selectedCategory);
+    let selectedCategoryID = document.getElementById("input-category").value;
+    let errors = validateForm(inpQuestion,inpAnswer,selectedCategoryID);
 
     if(errors === 0){
-        alert("Successful!")
-        //TODO: update in db firebase, delete also with db;
+        let newCard = new Card(inpQuestion, inpAnswer, selectedCategoryID);
+        db.updateCard(id, newCard).then( (card) => {
+            location.href = "../index.html";
+        });
     } 
+}
+
+function deleteCard(){
+    let id = "example";
+    db.deleteCard(id).then((card) => {
+        console.log("Card with id:"+id+"deleted");
+    });
 }
 
 function validateForm(question, answer, category){
@@ -42,9 +53,19 @@ function validateForm(question, answer, category){
         alert("You must select a category for the question!")
     }
 
+    if(authUser.currentUserID == null)
+    {
+        errors += 1;
+        alert("You must be logged in to add a card")
+    }
+
     return errors;
 }
 
 function fillSelectField(){
-    createSelectOptions("input-category", categories);
+    db.getCategories().then((snapshot) => {
+        createSelectOptions("input-category", snapshot.docs);
+    })
+
+   
 }
