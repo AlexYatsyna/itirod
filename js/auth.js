@@ -14,8 +14,12 @@ function submitLogin(){
     }
 
     if(errors === 0){
-        alert("Successful!")
-        //TODO :  will check in db firebase
+        authUser.login(email, password).then( () =>{
+            location.href = "../index.html";
+        }).catch( (e) =>{
+            console.log(e);
+            alert("Login is failed. Check your emain and password.")
+        })
     }
 
 }
@@ -60,7 +64,11 @@ function submitRegister(){
     }
 
     if(errors === 0){
-        alert("Successful")
-        //TODO: add to db firebase
+        authUser.register(email, password).then( () =>{
+            location.href = "../index.html";
+        }).catch( (e) =>{
+            console.log(e);
+            alert("Account already exists.")
+        })
     }
 }
