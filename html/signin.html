@@ -18,20 +18,20 @@
     <main>
         <div class="form-container">
             <p class="form-container__title">Sign in</p>
-            <form class="form">
+            <form class="form" method="post">
 
                 <div class="form-input">
                     <label for="input-email" class="form-input__label">Email</label>
-                    <input type="email" class="form-input__field" id="input-email" required>
+                    <input class="form-input__field" id="input-email" >
                 </div>
 
                 <div class="form-input">
                     <label for="input-password" class="form-input__label">Password</label>
-                    <input type="password" class="form-input__field" id="input-password" required minlength="5">
+                    <input type="password" class="form-input__field" id="input-password">
                 </div>
 
                 <div class="form-button">
-                    <button type="submit" class="form-button__submit">Sign in</button>
+                    <button onclick="submitLogin()" type="submit" class="form-button__submit">Sign in</button>
                 </div>
             </form>
 
@@ -71,5 +71,6 @@
         </div>
 
     </footer>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

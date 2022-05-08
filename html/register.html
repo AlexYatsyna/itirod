@@ -21,21 +21,21 @@
 
                 <div class="form-input">
                     <label for="input-email" class="form-input__label">Email</label>
-                    <input type="email" class="form-input__field" id="input-email" required>
+                    <input  class="form-input__field" id="input-email" >
                 </div>
 
                 <div class="form-input">
                     <label for="input-password" class="form-input__label">Password</label>
-                    <input type="password" class="form-input__field" id="input-password" required minlength="5">
+                    <input type="password" class="form-input__field" id="input-password">
                 </div>
 
                 <div class="form-input">
                     <label for="input-password2" class="form-input__label">Confirm Password</label>
-                    <input type="password" class="form-input__field" id="input-password2" required minlength="5">
+                    <input type="password" class="form-input__field" id="input-password2">
                 </div>
 
                 <div class="form-button">
-                    <button type="submit" class="form-button__submit">Register</button>
+                    <button type="submit" onclick="submitRegister()" class="form-button__submit">Register</button>
                 </div>
             </form>
 
@@ -76,5 +76,6 @@
         </div>
 
     </footer>
+    <script src="../js/auth.js"></script>
 </body>
 </html>
