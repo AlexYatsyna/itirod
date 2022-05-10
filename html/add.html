@@ -6,6 +6,10 @@
     <title>Quizlet</title>
 
     <link rel="stylesheet" href="../styles/style.css" type="text/css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
 <body>
 
@@ -18,12 +22,16 @@
             <nav class="menu">
                 <div class="menu-list">
 
-                    <div class="menu-list__item menu-list__item-border">
+                    <div class="menu-list__item menu-list__item-border" id="signin-btn">
                         <a href="./html/signin.html" class="menu-list__item-text" >Sign in</a>
                     </div>
 
-                    <div class="menu-list__item menu-list__item-border ">
+                    <div class="menu-list__item menu-list__item-border " id="register-btn">
                         <a href="./html/register.html" class="menu-list__item-text">Register</a>
+                    </div>
+
+                    <div class="menu-list__item-logout hide" id="logout-btn">
+                        <a href="" >Logout</a>
                     </div>
                 </div>
             </nav>
@@ -53,7 +61,7 @@
                 </div>
 
                 <div class="form-button">
-                    <button type="submit" onclick="submitAdd()" class="form-button__submit">Add</button>
+                    <button type="button" onclick="submitAdd()" class="form-button__submit">Add</button>
                 </div>
             </form>
         </div>
@@ -81,7 +89,10 @@
         </div>
 
     </footer>
-    <script src="../js/models.js"></script>
+    <script src="../js/db/models.js"></script>
+    <script src="../js/db/quizlet-db.js"></script>
+    <script src="../js/db/auth-db.js"></script>
+    <script src="../js/logout.js"></script>
     <script src="../js/html-elements.js"></script>
     <script src="../js/card-crud.js"></script>
 </body>

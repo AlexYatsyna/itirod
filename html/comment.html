@@ -6,6 +6,10 @@
     <title>Quizlet</title>
 
     <link rel="stylesheet" href="../styles/style.css" type="text/css">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
 <body>
 
@@ -29,7 +33,7 @@
 
                     <div class="comment-element">
                         <div class="form-button">
-                            <button type="submit" onclick="submitComment()" class="form-button__submit">Add</button>
+                            <button type="button" onclick="submitComment()" class="form-button__submit">Add</button>
                         </div>
                     </div>
                 </div>
@@ -61,8 +65,11 @@
             </ul>
         </div>
 
-    </footer>   
-
+    </footer>  
+    <script src="../js/db/models.js"></script>
+    <script src="../js/db/quizlet-db.js"></script>
+    <script src="../js/db/auth-db.js"></script>
+    <script src="../js/auth.js"></script>
     <script src="../js/comment.js"></script>
 </body>
 </html>

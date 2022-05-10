@@ -36,8 +36,8 @@ function createSpan(styleClass, text){
 function createSelectOptions(id, data){
     let selectElement = document.getElementById(id);
 
-    for(item in data){
-        selectElement.appendChild(createOption(item, data[item].name));
+    for(item of data){
+        selectElement.appendChild(createOption(item.id, item.data().name));
     }
 }
 
@@ -48,4 +48,13 @@ function createOption(value, text){
     option.innerText = text;
 
     return option;
+}
+
+function createArticle(styleClass, text=""){
+    let article = document.createElement("article");
+
+    article.setAttribute("class", styleClass);
+    article.innerText = text;
+
+    return article;
 }
